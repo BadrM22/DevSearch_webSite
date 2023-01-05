@@ -10,6 +10,8 @@ class Project(models.Model):
     
     title = models.CharField(verbose_name='Title',max_length=150)
     
+    featured_image = models.ImageField(default="default.jpg",null=True,blank=True)
+    
     description = models.TextField(verbose_name="Description",null=True,blank=True)
     
     tags = models.ManyToManyField('Tag',blank=True)
